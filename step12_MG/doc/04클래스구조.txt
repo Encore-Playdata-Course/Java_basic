@@ -1,0 +1,60 @@
+주제
+	재능기부
+
+필요한 도메인
+	1. 기부자 정보
+			Donator.java
+			
+	2. 수혜자 정보
+			Beneficiary
+			
+	3. 재능기부유형 정보
+			TalentDonation.java
+			
+	4. 어떤 기부자가 누구에게(수혜자) 어떤 기부를 할 것 인지에 대한 정보
+			TalentDonationProject.java
+				
+	1~4번까지 각각의 개별 클래스로 구현
+	
+	5. RDBS 대체용 클래스(test data 보유)
+		DonationModelVirtualDB.java
+	
+	6. probono.view package
+		1. StartView.java :시작
+			향후 web 사이트 첫 intro 화면으로 확장 예정
+		2. EndView.java
+			- 정상 실행 응답 처리
+		3. FailView.java
+			- 비정상 실행 시 응답 처리
+			
+	7. probono.controller
+		- view와 model 사이의 모든 로직 처리하는 중재자 기능의 클래스
+		- 비정상 응답과 정상 응답에 따른 모든 처리도 관리
+		- 현업에선 직접 DB와 소통하지 않고 db를 관리하는 또 다른 클래스들과 소통...
+	
+	8. probono.service
+		TalentDonationProjectService.java
+		- controller와 back end 중간 처리 로직
+		- 트랜잭션 처리 등을 이 클래스 형식에서 적용하기도 함
+		
+	9. probono.exception
+		- 사용자 (자바를 사용해서 개발하는 개발자)들이 직접 의미에 부합되는 이름으로 
+		예외 클래스를 개발해서 사용하는 구조
+		
+		- 구현 방법
+			1. 클래스 이름은 발생 시 사용하고자 하는 의미 부여하기
+			2. rule
+				1. Exception 상속 필수
+				2. 기본 생성자, parameter가 있는 생성자 개발
+				3. parameter가 있는 생성자 내부에 super("메세지")
+				
+			public class NotExistException extends Exception{
+				public NotExistException(){}
+				public NotExistException(String message){
+					super(message);
+				}
+			}
+	
+	
+	
+	

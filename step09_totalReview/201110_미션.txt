@@ -1,0 +1,16 @@
+1. 지금까지 배운 모든 내용 review
+	* 기본문법
+		타입, 변수, 생성자, 메소드, static, access modifier(public/private/default)
+	* 예외처리
+	* 상속	& 다형성
+	* pattern
+		MVC, DTO(VO), Builder
+	* maven, log4j, slf4j, lombok
+	* 사고하는 힘 + 문제해결 능력 향상 + 참조문서 사용 + 주제(생각의 확장)
+
+2. 예시
+	도서정보 관리
+	자동차 관리 시스템
+	학사관리 시스템
+		People.java 상속받는 직원.java, 학생.java ...등으로 설계해서 상속 다형성..
+	...~

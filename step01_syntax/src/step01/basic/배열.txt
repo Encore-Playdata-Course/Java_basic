@@ -1,0 +1,56 @@
+// 배열 타입의 활용을 위한 필기
+int i = 1;
+int getInt() {
+	return 3;
+}
+
+int [] ii = {1, 2};
+int[] getInt() {
+	int [] ii = {1, 2};
+	return ii;
+}
+
+
+String s = "23";
+String getString() {
+	return "Ew";
+}
+
+
+String [] s = {"23", "ew"};
+String [] getString() {
+	String [] s = {"23", "ew"};
+	return s;
+}
+
+
+Customer c = new Customer();
+Customer getC() {
+	return new Customer();
+}
+
+Customer [] c = {new Customer(), new Customer()};
+Customer[] getC() {
+	Customer [] c = {new Customer(), new Customer()};
+	return c;
+}
+
+void a(int i) {} / a(3);
+void a(String i) {} / a("3");
+
+
+
+void a(int[] i) {}
+int [] ii = {1, 2};
+a(ii);
+
+
+void a(String[] i) {}
+String [] s = {"23", "ew"};
+a(s);
+
+void a(Customer[] i) {} 
+Customer [] c = {new Customer(), new Customer()};
+a(c);
+Customer c2 = new Customer();
+a(c2);

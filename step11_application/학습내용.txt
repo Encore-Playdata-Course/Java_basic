@@ -1,0 +1,56 @@
+학습 내용
+
+1. 고객 관리 프로그램
+	고객 정보 : id/name/age/address/...
+2. CRUD
+	create
+		- 혹여 id 값 중복 불가인 경우
+			client에게 id중복 따라서 다른 id값 활용 유도
+		- id값이 무결한 경우
+			저장
+	read(검색, query, select, search)
+		- 모든 검색 : 조건값 없음
+		- 고객 한명 검색 : 고유한 id값으로 검색(보편적)
+		- 조건에 따라 검색 : 지역? 동명? 성별?
+		.........
+		
+		- 검색 시도 시 데이터 없음
+			- 입력 데이터를 잘못 입력
+				
+			- 입력 데이터 유효하지만 부합되는 정보가 없을 수도 있음
+				존재하는 데이터 정상 응답 - 해당 데이터 반환
+				미 존재하는 데이터 정상 응답 - 해당 데이터 없다는 메세지 반환
+		- 검색 시도 시 데이터 있음
+			존재하는 데이터 정상 응답 - 해당 데이터 반환
+	update
+		- 기준으로 개선 데이터
+		- id값으로 거주지 이동 개인 정보 수정
+		- 주소를 기준으로 그 지역의 모든 거주자들 주소를 일괄적으로 update
+		...
+		
+	delete
+		- 기준 데이터로 해당 고객만 삭제
+		- 모든 고객 삭제
+		...
+
+
+
+
+3. application 설계
+	1. 클래스 설계
+		model.domain.Customer.java
+		model.CustomerModel.java
+			- crud
+		model.db.VirtualDataBase.java
+			- test용 Customer 데이터들(DB)
+			- CUstomer 실시간 가입, 탈퇴...
+				동적 메모리 활용
+				java.util.ArrayList : index로 데이터 관리
+				java.util.HashMap : 고유한 key로 고객 정보 저장
+		StartView.java
+			- main()
+		controller.CustomerController.java
+		EndView.java
+			- 모든 출력
+
+	

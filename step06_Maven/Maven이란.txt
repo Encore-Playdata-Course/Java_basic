@@ -1,0 +1,46 @@
+
+1. Open source
+	- 무상 배포해서 누구나가 무료로 사용 가능한 library들
+	- 단순 사용만 하기도 하고, 편집해서 사용,
+		편집해서 사용하고 상용화 하기도 함
+		
+2. mac 노트북
+	- os : ios
+	- linux라는 open source를 기반으로 애플에서 편집
+	
+3. 참고
+	- linux os 학습
+	- 수업 중에는 무료인 centos os 사용 예정
+
+4. Spring
+	- http://spring.io에서 제공하는 library
+	
+	- 대한민국에ㅓ 필요한 IT 지식
+	
+	- 정부, 대학, 대기업들의 내부 서버 구현 언어
+		: java라는 언어로 표준화한 구조로 개발 및 서비스
+		: 강제 표준화 
+			- 누가 어떤 경력으로 개발을 하던 큰 차이가 안남
+			- 대기업 자체적으로 개발하는 solution(framework), 정부주도 권장 (전자정부표준 framework)
+			- 다 spring 기반
+			
+	- 필요한 library 셋팅이 어렵다
+		다양한 것들이 조합(버전이랑 어떤 library들 필요...)이 되어야만 정상 실행
+		과거처럼 개발자들이 일일이 세팅은 불가능한 시대
+		해결책 : 연관된 library들을 자동으로 셋팅해주는 기능의 tool들 사용이 절대적
+			maven(java), gradle(언어 구분 없음)
+		http://jakarta.apache.org/
+		
+5. eclipse에서 maven을 사용하기 위한 방법
+	1. 개발자들에게 최대한의 편의성 제공
+	2. 4버전 이후 부터 maven 기능의 plug in 이 이미 내장
+	3. 단점
+		- 소소한 버그
+		- jdk가 미 제공하는 library들을 (*.jar) 자동 다운로드 시킴
+		- 껍네기만 다운로드 시키는 경우도 있음
+	4. 실제 개발 방식
+		1단계 : maven 기반의 project로 설정
+		2단계 : maven 자체의 설정 파일에 필요한 library들을 설정
+		3단계 : library가 원격저장소로 부터 local 저장소로 다운로드가 됨
+		4단계 : library 사용해서 개발
+5. 

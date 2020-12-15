@@ -1,0 +1,97 @@
+학습내용
+
+1. java 소스 구조
+	package 선언구
+	import 선언구
+	public class class 명 {
+		변수
+			public 타입 변수명;
+			private 타입 변수명 = 값;
+			
+		생성자
+			클래스명(){} 기본생성자
+			클래스명(로컬변수들 선언){
+				멤버 변수들 초기화
+			}
+			
+		메소드
+			반환 타입 메소드([로컬변수]){
+				로직
+				[return 데이터];
+			}
+		
+	}
+	
+2. 타입
+	기본
+		8가지
+		정수형 : byte / short / int / long
+		실수형 소수점 : float / double
+		문자형 char
+		논리형 boolean
+		
+	참조(reference, 객체(object), class) 타입
+		api에서 제공
+		사용자 정의 타입 - Book, ...
+					- class 개발이 선행
+
+3. pattern
+	1. DTO/VO pattern
+		Data Transfer Object
+		Value Object
+		주 용도 - 데이터 표현
+		문법
+			멤버 변수
+			기본 생성자
+			생성자
+			getXxx()/setXxx()
+			- tag & framework 사용 시 이 기본틀 안 지켜 주시면 사용 불가
+		* 클래스명 명명규칙
+			Customer.java / CustomerDTO.java / CustomerVO.java
+			/ CustomerBean.java
+
+4. 객체 생성 문법
+	new 생성자([..]);
+	
+5. 생성된 객체를 사용 안 하겠다는 설정
+	참조변수 = null;
+
+6. 조건식
+	if(조건식){
+		조건식이 true인 경우 실행
+	}else{
+		조건식이 false인 경우 실행
+	}
+
+7. 호출 문법
+	class Test{
+		int no;
+		void m(){
+		}
+	}
+	
+	p.s.v.maim(){
+		Test t = new Test();
+		t.no = 20;
+		t.m();
+		syso(t.no);
+	}
+	
+	class A{
+		int no = 10;
+		void m(){}
+	}
+	
+	class B{
+		A a = new A();
+		
+		p.s.v.m(){
+			B b = new B();
+			s.o.p(b.a.no); //10
+			b.a.m();
+		}
+		
+		
+*. new 용어
+	1. 클린코드
+	2. 리팩토링
